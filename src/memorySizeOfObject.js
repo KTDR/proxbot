@@ -1,0 +1,46 @@
+//calculate memory size of object, not an accurate value! Credit to zensh
+//https://gist.github.com/zensh/4975495
+//https://evdokimovm.github.io/javascript/nodejs/2016/06/13/NodeJS-How-to-Use-Functions-from-Another-File-using-module-exports.html
+
+//Changed from var to const, change back if problems occur.
+const methods = {
+    memorySizeOf: function(obj) {
+        var bytes = 0;
+    
+        function sizeOf(obj) {
+            if(obj !== null && obj !== undefined) {
+                switch(typeof obj) {
+                case 'number':
+                    bytes += 8;
+                    break;
+                case 'string':
+                    bytes += obj.length * 2;
+                    break;
+                case 'boolean':
+                    bytes += 4;
+                    break;
+                case 'object':
+                    var objClass = Object.prototype.toString.call(obj).slice(8, -1);
+                    if(objClass === 'Object' || objClass === 'Array') {
+                        for(var key in obj) {
+                            if(!obj.hasOwnProperty(key)) continue;
+                            sizeOf(obj[key]);
+                        }
+                    } else bytes += obj.toString().length * 2;
+                    break;
+                }
+            }
+            return bytes;
+        };
+    
+        function formatByteSize(bytes) {
+            if(bytes < 1024) return bytes + " bytes";
+            else if(bytes < 1048576) return(bytes / 1024).toFixed(3) + " KiB";
+            else if(bytes < 1073741824) return(bytes / 1048576).toFixed(3) + " MiB";
+            else return(bytes / 1073741824).toFixed(3) + " GiB";
+        };
+    
+        return formatByteSize(sizeOf(obj));
+    }
+};
+export default methods; //Node.js specific feature, to allow functions to be used in other files

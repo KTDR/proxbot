@@ -1,0 +1,20 @@
+{
+    "token" :    "000000000000000000",
+    "clientID"  :   "000000000000000000",
+    "prefix" : "!",
+    "owner" :   "000000000000000000",
+
+    "twitchID" : "000000000000000000",
+    "twitchSecret" : "000000000000000000",
+    "twitchBearerToken": "000000000000000000",
+
+    "streamer" : "000000000000000000",
+    "streamAlertChannel" : "stream-notifications",
+
+    "embedColor" : "#6441A4",
+    "BOT_NAME_VERSION" : "Proxbot v0.2.1",
+    "CONFIG_IDENTIFIER" : "°",
+    "STREAMCHECK_INTERVAL":    1.2,
+    "DEBUGGING" :  false,
+    "WEBSERVER_ENABLE" : false
+}

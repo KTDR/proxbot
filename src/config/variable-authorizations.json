@@ -1,0 +1,24 @@
+{
+    "auths": { 
+        "SERVER_ID": 3,
+        "authorization_level": 3,
+        "enablePurge" : 1,
+        "streamers": 1,
+        "alertMessage" : 1,
+        "enableMemberNotifications": 1,
+        "botRole": 0,
+        "streamAlertType": 0,
+        "prefix": 0
+    },
+    "info" : {
+        "SERVER_ID": "Discord ID of this server.",
+        "authorization_level": "The level of access this server has to the bot's functions, between 0-2.",
+        "enablePurge" : "Enable/Disable message purge function",
+        "streamers": "Usernames of Twitch streamers being monitored. Set with a comma separated list(no,spaces) of up to 4 twitch names. Change variable to null to disable stream alerts.",
+        "alertMessage": "Custom alert message when a stream goes live. Use [NAME] and [LINK] to have the bot insert the relevant streamer name and hyperlink, respectively. Set to null to return to default.",
+        "enableMemberNotifications": "Enable/Disable new member notifications.",
+        "botRole": "Name of role for members allowed to use the bot.",
+        "streamAlertType": "Type of mention to be sent when stream goes live.",
+        "prefix": "Message prefix for interacting with bot."
+    }
+}

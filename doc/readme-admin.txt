@@ -1,0 +1,1 @@
+4 authorization levels for servers. Level 0 is base case. Level 1 is elevated. Level 2 is maximum permissions. Level 3 is only for bot owner.

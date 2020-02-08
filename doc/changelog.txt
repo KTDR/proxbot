@@ -1,0 +1,15 @@
+____v0.2.1 Changes:____
++Migrated project language from JavaScript to TypeScript
++Upgraded to Node.js v12.1 to leverage improvements to async/await and http/js parsing
++Total rewrite of all time-tracking functions, should be much more reliable now.
++Total rewrite of stream checking module, no longer based on server activity, more reliable/accurate and can now handle multiple streamers across servers, configure yours in the bot-config channel.
++Removed twitch.tv-api dependency, replaced with my own module which utilizes the helix api and bearer tokens
++Switched to bearer token for Twitch.tv API authorization, increasing rate limit to 800/min from the previous 30.
++First implementation of server variable storage. Variables are stored JSON formatted in a pinned message in the bot-config text channel. 
++Authorization levels for servers. Servers with higher authorization get access to more bot features. *needs testing*
++Groundwork for feature/authorization requests and bug reports. These are sent to the bot owner's personal Discord server and managed from there. 
++Added auto-reconnect functionality to recover from network outages *needs testing*
++Added some I/O safety checks for file operations
++Code refactoring and optimization. In testing bot has consistently responded 50-100% faster than the previous version.
++Added some backend features to help with performance monitoring, such as execution timers and a latency testing command.
+-Check the !help file for more info on new features.

@@ -1,0 +1,15 @@
+{
+    "adminServer" :    "000000000000000000", 
+    "botOwner" : "000000000000000000", 
+
+    "adminChannelCategory": "000000000000000000",
+    "consoleChannel" : "000000000000000000",
+    "authorizationRequestsChannel" : "000000000000000000",
+    "featureRequestsChannel"    :   "000000000000000000",
+    "bugReportsChannel" :   "000000000000000000",
+    "logChannel" :  "000000000000000000",
+
+    "testingServers": [
+        000000000000000000
+    ]
+}
